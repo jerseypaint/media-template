@@ -1,6 +1,7 @@
 const indexName = `dev_Alt`
 
-const pageQuery = `{
+const articleQuery = `
+    query ArticleQuery {
         allArticles: allContentfulArticle {
             edges {
                 node {
@@ -16,19 +17,18 @@ const pageQuery = `{
     }
 `
 
-function pageToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
+function artilcleToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
   return {
     objectID: id,
-    title,
-    slug,
+    ...description,
     ...rest,
   }
 }
 
 const queries = [
   {
-    query: pageQuery,
-    transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
+    query: articleQuery,
+    transformer: ({ data }) => data.allArticles.edges.map(articleToAlgoliaRecord),
     indexName,
     settings: { attributesToSnippet: [`excerpt:20`] },
   },
