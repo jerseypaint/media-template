@@ -16,12 +16,11 @@ const pageQuery = `{
     }
 `
 
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
   return {
     objectID: id,
     title,
     slug,
-    ...description,
     ...rest,
   }
 }
