@@ -17,7 +17,7 @@ const articleQuery = `
     }
 `
 
-function artilcleToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
+function articleToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
   return {
     objectID: id,
     ...description,
