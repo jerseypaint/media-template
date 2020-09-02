@@ -78,7 +78,6 @@ const News = (props) => (
         <span>{props.author} | </span><span>{props.date}</span>
         </MetaWrapper>
     </div>
-
   </NewsContainer>
 )
 

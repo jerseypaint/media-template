@@ -1,4 +1,4 @@
-const indexName = `dev_Alt`
+const indexName = `dev_ALT`
 
 const articleQuery = `
     query ArticleQuery {
@@ -20,6 +20,8 @@ const articleQuery = `
 function articleToAlgoliaRecord({ node: { id, title, slug, description, ...rest } }) {
   return {
     objectID: id,
+    title,
+    slug,
     ...description,
     ...rest,
   }

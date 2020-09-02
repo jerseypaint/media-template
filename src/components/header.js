@@ -3,6 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
+import Search from "./search"
+
+const searchIndices = [{ name: `dev_Alt`, title: `dev_Alt` }]
+
 const HeaderContainer = styled.div`
   text-align: center;
   max-width: 1440px;
@@ -10,8 +14,7 @@ const HeaderContainer = styled.div`
 `
 
 const NavContainer = styled.div`
-  display: flex;
-  justify-content: center;
+
 `
 
 const SiteTitle = styled(Link)`
@@ -41,10 +44,7 @@ const Header = ({ siteTitle }) => (
       </div>
       <NavContainer>
         <div>
-          Search
-        </div>
-        <div>
-          Nav
+        <Search indices={searchIndices} />
         </div>
       </NavContainer>
     </HeaderContainer>
