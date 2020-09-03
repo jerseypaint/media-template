@@ -14,14 +14,13 @@ const Popover = css`
   padding: 1em;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   background: ${({ theme }) => theme.background};
-  overflow
+
 `
 
 export default styled(SearchResult)`
   display: block;
   transform: ${props => (props.show ? `translateX(0)` : `translateX(100%)`)};
   transition: transform 500ms ease;
-
   ${Popover}
 
   .HitCount {
