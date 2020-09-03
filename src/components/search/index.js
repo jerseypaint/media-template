@@ -9,7 +9,7 @@ import useClickOutside from "./use-click-outside"
 
 const theme = {
   foreground: "#050505",
-  background: "white",
+  background: "#FBFEF9",
   faded: "#888",
 }
 
