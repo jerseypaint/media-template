@@ -23,7 +23,7 @@ const PageHit = ({ hit }) => (
   <div>
     <Link to={``}>
       <h4>
-        <Highlight attribute="objectID" hit={hit} tagName="mark" />
+        <Highlight attribute="title" hit={hit} tagName="mark" />
       </h4>
     </Link>
     <Snippet attribute="description" hit={hit} tagName="mark" />

@@ -32,7 +32,13 @@ const queries = [
     query: articleQuery,
     transformer: ({ data }) => data.allArticles.edges.map(articleToAlgoliaRecord),
     indexName,
-    settings: { attributesToSnippet: [`title`,`description`] },
+    settings: {
+      attributesToSnippet: [`title`,`description`],
+      searchableAttributes: [
+      'unordered(title)',
+      'unordered(description)'
+      ]
+    },
   },
 ]
 

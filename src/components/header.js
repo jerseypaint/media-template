@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import Search from "./search"
 
-const searchIndices = [{ name: `dev_Alt`, title: `dev_Alt` }]
+const searchIndices = [{ name: `dev_ALT`, title: `dev_ALT` }]
 
 const HeaderContainer = styled.div`
   text-align: center;
